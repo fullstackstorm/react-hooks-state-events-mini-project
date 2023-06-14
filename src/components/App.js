@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { AppProvider } from "./AppContext";
 import CategoryFilter from "./CategoryFilter";
 import NewTaskForm from "./NewTaskForm";
 import TaskList from "./TaskList";
@@ -19,8 +18,8 @@ function App() {
         : tasks.filter((task) => task.category === selectedCategory);
 
     return newList;
-  }
-  
+  };
+
   function onTaskFormSubmit(task) {
     setTasks([...tasks, task]);
   }
@@ -35,7 +34,6 @@ function App() {
       <h2>My tasks</h2>
       <CategoryFilter
         categories={CATEGORIES}
-        onChange={filterTaskList}
         setCategory={setSelectedCategory}
         selectedCategory={selectedCategory}
       />
@@ -49,7 +47,7 @@ function App() {
 }
 
 export default () => (
-  <AppProvider>
+  //<AppProvider>
     <App />
-  </AppProvider>
+  //</AppProvider>
 );

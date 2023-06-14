@@ -1,5 +1,3 @@
-import React, { useState } from "react";
-
 // || Get the category data from App as a prop.
 // || Update the component to display <button> elements for each category.
 // || The buttons' key prop should be equal to the category.
@@ -7,12 +5,7 @@ import React, { useState } from "react";
 //  || Add 'selected' class.
 //  || Only display tasks that match the clicked category.
 //  || 'All' should display all tasks.
-function CategoryFilter({
-  categories,
-  onChange,
-  setCategory,
-  selectedCategory,
-}) {
+function CategoryFilter({ categories, setCategory, selectedCategory }) {
   return (
     <div className="categories">
       <h5>Category filters</h5>
